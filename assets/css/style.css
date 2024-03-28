@@ -14,11 +14,11 @@
 
 color_example {
     color:
-    #2D3540
-    #0B8C38
-    #20733D
-    #5DBF4E
-    #F2F2F2
+    #F2295F
+    #33308C
+    #04D99D
+    #F2A03D
+    #F24130
     /*additional borders and shadows*/
     #FFFFFF
     #ddd
@@ -27,3 +27,62 @@ color_example {
 
 /*--------------------------------------------Container*/
 
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    margin-top: 20px;
+}
+
+/*--------------------------------------------Cards*/
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.card-flipped {
+    background-color: #f2f2f2;
+}
+
+/*--------------------------------------------Buttons*/
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #33308c;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #04d99d;
+}
+
+.hidden {
+    display: none;
+}
