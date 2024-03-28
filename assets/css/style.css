@@ -1,0 +1,29 @@
+ /* Style the body */
+
+ body, html {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+ /*--------------------------------------------Colors*/
+
+color_example {
+    color:
+    #2D3540
+    #0B8C38
+    #20733D
+    #5DBF4E
+    #F2F2F2
+    /*additional borders and shadows*/
+    #FFFFFF
+    #ddd
+    #ccc
+    } 
+
+/*--------------------------------------------Container*/
+
