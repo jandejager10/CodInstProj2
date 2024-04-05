@@ -8,6 +8,7 @@
     align-items: center;
     height: 100vh;
     font-family: Arial, sans-serif;
+    background-color: #33308C;
 }
 
  /*--------------------------------------------Colors*/
@@ -28,61 +29,73 @@ color_example {
 /*--------------------------------------------Container*/
 
 .game-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    max-width: 600px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #f9f9f9;
+    text-align: center;
+    color: #F2A03D;
 }
-
+/*come back later to check spacing*/
 .grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px;
-    margin-top: 20px;
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
 /*--------------------------------------------Cards*/
 
 .card {
+    background: #F2295F;
+    border: 2px solid #F24130;
+    width: 80px;
+    height: 120px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100px;
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 4px;
+    font-size: 0;
+    perspective: 1000px;
     cursor: pointer;
+    color: #04D99D;
 }
 
-.card-flipped {
-    background-color: #f2f2f2;
+.card.flipped {
+    font-size: 16px;
+    background: #F2A03D;
 }
 
 /*--------------------------------------------Buttons*/
 button {
-    padding: 10px 20px;
+    background-color: #04D99D;
+    color: #33308C;
+    margin: 10px;
+    padding: 5px 10px;
     font-size: 16px;
-    font-weight: bold;
-    color: #fff;
-    background-color: #33308c;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #04d99d;
+    background-color: #F2295F;
 }
 
 .hidden {
     display: none;
 }
+
+/*--------------------------------------------Footer*/
+.game-footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    color: #F2A03D;
+}
+
+.game-footer a {
+    color: #04D99D;
+    text-decoration: none;
+}
+
+.game-footer a:hover {
+    text-decoration: underline;
+}
+
