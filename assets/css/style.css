@@ -54,7 +54,8 @@ color_example {
     font-size: 0;
     perspective: 1000px;
     cursor: pointer;
-    color: #04D99D;
+    background-size: cover;
+    background-position: center;
 }
 
 .card.flipped {

@@ -7,10 +7,11 @@ document.addEventListener('DOMContentLoaded', () => {
     let lockBoard = false;
     let firstCard, secondCard;
 
-    function createCard(text) {
+    function createCard(tileName) {
         const cardElement = document.createElement('div');
         cardElement.classList.add('card');
-        cardElement.dataset.name = text;
+        cardElement.dataset.name = tileName;
+        cardElement.style.backgroundImage = `url('./assets/img/tile-${tileName}.png')`;
         cardElement.addEventListener('click', flipCard);
         return cardElement;
     }
@@ -82,6 +83,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     initGame();
+
+    document.getElementById('resetButton').addEventListener('click', resetGame);
 });
 
 function showInstructions() {
