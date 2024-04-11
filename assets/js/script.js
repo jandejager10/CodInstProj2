@@ -7,11 +7,11 @@ document.addEventListener('DOMContentLoaded', () => {
     let lockBoard = false;
     let firstCard, secondCard;
 
-    function createCard(tileName) {
+    function createCard(cardName) {
         const cardElement = document.createElement('div');
         cardElement.classList.add('card');
-        cardElement.dataset.name = tileName;
-        cardElement.style.backgroundImage = `url('./assets/img/tile-${tileName}.png')`;
+        cardElement.dataset.name = cardName;
+        cardElement.style.backgroundImage = `url('./assets/img/${cardName}.png')`;
         cardElement.addEventListener('click', flipCard);
         return cardElement;
     }
