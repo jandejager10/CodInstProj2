@@ -65,20 +65,14 @@ Welcome to my "Level 5 Diploma in Web Application Development" CodeInst Interact
 - keep track of time
 
 # Acknowledgements + Code
-- 	Code for hover transitions from http://ianlunn.co.uk/ using cdnjs cloudflare shortcuts.
-- 	Code for Bootstrap CSS framework delivered via https://cdn.jsdelivr.net
-- 	Code for FontAwesome delivered via https://cdn.jsdelivr.net
-- 	style.css basic layout headings from codeinstitute.com, the Rosie mini-project.
 -	Adobe, for the color wheel.  #2D3540	#0B8C38	#20733D #5DBF4E #F2F2F2
--	Pictures / Photos from https://pixabay.com/
--	Picures / Photos from https://www.shutterstock.com/
-- 	Youtube - for all the videos
+-	Pictures / Photos from https://stock.adobe.com/
+-   Favicon - https://icons8.com/
 
 # Media (images and animations)
 	All them pictures have got to come from somewhere afterall:
--	Pictures / Photos from https://pixabay.com/
--	Picures / Photos from https://www.shutterstock.com/
-		no individual attribution at this stage.
+-	Pictures / Photos from https://stock.adobe.com/
+-   Favicon - https://icons8.com/
 	
 # Release History + Bugs
 28/03/2024 - Conserted effort start.
