@@ -11,16 +11,19 @@ document.addEventListener('DOMContentLoaded', () => {
         const cardElement = document.createElement('div');
         cardElement.classList.add('card');
         cardElement.dataset.name = cardName;
-        cardElement.style.backgroundImage = `url('./assets/img/${cardName}.png')`;
+
+        //ensure cards start face down
         cardElement.addEventListener('click', flipCard);
         return cardElement;
     }
 
     function flipCard() {
-        if (lockBoard) return;
-        if (this === firstCard) return;
-
+        if (lockBoard || this.classList.contains('flipped')) return;
+        
+        // Show the card's image only when it's flipped
+        this.style.backgroundImage = `url('assets/img/${this.dataset.name}.png')`;
         this.classList.add('flipped');
+
         if (!hasFlippedCard) {
             hasFlippedCard = true;
             firstCard = this;
@@ -33,7 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function checkForMatch() {
         let isMatch = firstCard.dataset.name === secondCard.dataset.name;
-
         isMatch ? disableCards() : unflipCards();
     }
 
@@ -50,6 +52,11 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
             firstCard.classList.remove('flipped');
             secondCard.classList.remove('flipped');
+
+            // Remove background image to hide the card face
+            firstCard.style.backgroundImage = '';
+            secondCard.style.backgroundImage = '';
+
             resetBoard();
         }, 1500);
         attempts++;
@@ -80,12 +87,18 @@ document.addEventListener('DOMContentLoaded', () => {
             .sort(() => Math.random() - 0.5)
             .map(cardName => createCard(cardName));
 
-        deck.forEach(card => grid.appendChild(card));
+        deck.forEach(card => {
+            //Ensure card starts face down
+            card.classList.remove('flipped');
+            card.style.backgroundImage = '';
+            grid.appendChild(card);
+        });
         updateStatusText();
     }
 
+    //Initialise game
     initGame();
-
+    // Event listener for the reset button
     document.getElementById('resetButton').addEventListener('click', resetGame);
 });
 
