@@ -65,6 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
         statusText.textContent = `Attempts: ${attempts} | Matches: ${matches}`;
     }
 
+    // Code to reset the game
     function resetGame() {
         grid.innerHTML = '';
         attempts = 0;
@@ -72,6 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
         initGame();
     }
 
+    // Initialize game
     function initGame() {
         const cardNames = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
         const deck = [...cardNames, ...cardNames]
