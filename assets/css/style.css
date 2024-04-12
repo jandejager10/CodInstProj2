@@ -40,33 +40,39 @@ color_example {
 /*--------------------------------------------Container*/
 
 .game-container {
-    text-align: center;
-    color: #F2A03D;
+    max-width: 600px;
+    margin:auto;
+    padding: 20px
+    box-sizing: border-box;
 }
-/*come back later to check spacing*/
+/*create the 4x4 grid*/
 .grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
-    margin-bottom: 20px;
+    justufy-content: center;
 }
 
 /*--------------------------------------------Cards*/
 
 .card {
     background: #F2295F;
-    border: 2px solid #F24130;
-    width: 80px;
-    height: 120px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 4px;
-    font-size: 0;
-    perspective: 1000px;
-    cursor: pointer;
+    width: calc(25% - 10px);
+    height: 0;
+    padding-top: calc(25% - 10px);
+    position: relative;
     background-size: cover;
     background-position: center;
+}
+
+.card::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .card.flipped {
@@ -111,3 +117,30 @@ button:hover {
     text-decoration: underline;
 }
 
+/*--------------------------------------------Media Queries*/
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .card {
+        width: calc(25% - 10px);
+        padding-top: calc(25% - 10px);
+    }
+}
+
+@media (max-width: 480px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card {
+        width: calc(50% - 10px);
+        padding-top: calc(50% - 10px);
+    }
+}
+
+/*-----------------------------------Flexible Text Sizes*/
+.staus-text, .game-footer p{
+    font-size: calc(10px + 1vw);
+}
