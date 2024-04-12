@@ -125,10 +125,8 @@ button:hover {
     .grid {
         grid-template-columns: repeat(4, 1fr);
     }
-
     .card {
-        width: calc(25% - 10px);
-        padding-top: calc(25% - 10px);
+        padding-bottom: 100%;
     }
 }
 
@@ -136,31 +134,23 @@ button:hover {
     .grid {
         grid-template-columns: repeat(2, 1fr);
     }
-
     .card {
-        width: calc(50% - 10px);
-        padding-top: calc(50% - 10px);
-    }
-}
-
-@media (max-width: 320px) {
-    .grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .card {
-        width: calc(50% - 10px);
-        padding-top: calc(50% - 10px);
+        padding-bottom: 100%;
     }
 }
 
 @media (min-width: 1024px) {
     .grid {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(4, minmax(150px, 1fr));
     }
-
     .card {
         padding-bottom: 100%;
+    }
+}
+
+@media (min-width: 1440px) {
+    .grid {
+        grid-template-columns: repeat(5, minmax(150px, 1fr));
     }
 }
 
