@@ -21,8 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (lockBoard || this.classList.contains('flipped')) return;
         
         // Show the card's image only when it's flipped
-        this.style.backgroundImage = `url('assets/img/${this.dataset.name}.png')`;
-        this.classList.add('flipped');
+        cardElement.style.backgroundImage = `url('assets/img/${cardName}.png')`;
+        
 
         if (!hasFlippedCard) {
             hasFlippedCard = true;
