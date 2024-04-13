@@ -1,6 +1,6 @@
  /*------------------------Header and Navigation Styling*/
  header {
-    background-image: url('./assets/img/background.webp');
+    background-image: url("./assets/img/background.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
