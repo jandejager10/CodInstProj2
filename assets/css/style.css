@@ -1,11 +1,25 @@
  /*------------------------Header and Navigation Styling*/
+ header {
+    background-image: url('./assets/img/background.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    z-index:10;
+ }
+
  .navbar {
-    background-color: #33308C;
+    /* background-image: url('./assets/img/background.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #33308C; */
     padding: 1em 0;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
+    background-color: transparent;
  }
 
  body {
