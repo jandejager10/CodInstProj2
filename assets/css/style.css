@@ -1,6 +1,6 @@
  /*------------------------Header and Navigation Styling*/
  header {
-    background-image: url("/assets/img/background.webp");
+    background-image: url("/assets/img/background-small.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -8,12 +8,19 @@
     z-index:10;
  }
 
+ @media (min-width: 768px) {
+     header {
+         background-image: url('/assets/img/background-medium.webp');
+     }
+ }
+ 
+ @media (min-width: 1024px) {
+     header {
+         background-image: url('/assets/img/background-large.webp');
+     }
+ }
+
  .navbar {
-    /* background-image: url('./assets/img/background.webp');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: #33308C; */
     padding: 1em 0;
     position: fixed;
     top: 0;
@@ -23,17 +30,11 @@
  }
 
  body {
-    padding-top: 70px;
+    padding-top: 70px; /* Ensure body content does not hide under the navbar - not working for some reason */
     margin: 0;
  }
 
- .container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 15px;
-}
-
-.nav-list {
+ .container, .nav-list {
     max-width: 1200px;
     margin: auto;
     padding: 0 15px;
@@ -65,8 +66,6 @@
  /*---------------------------------------Style the body */
 
  body, html {
-    margin: 0;
-    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -92,9 +91,7 @@
     padding-top: 100px;
 }
 
-
  /*--------------------------------------------Colors*/
-
 color_example {
     color:
     #F2295F
@@ -109,7 +106,6 @@ color_example {
     } 
 
 /*--------------------------------------------Container*/
-
 .game-container {
     width: auto;
     max-width: 100%;
@@ -117,7 +113,8 @@ color_example {
     padding: 20px
     box-sizing: border-box;
 }
-/*create the 4x4 grid*/
+
+/*--------------------------------------------Grid for Cards*/
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
@@ -125,14 +122,13 @@ color_example {
     justify-content: center;
 }
 
-/*--------------------------------------------Cards*/
-
+/*--------------------------------------------Cards Styling and Interaction */
 .card {
-    background: #F2295F;
+    background: #F2295F; /* Fallback color */
     position: relative;
     width: calc(25% -10px);
     height: 0;
-    padding-top: calc(25% -10px);
+    padding-top: calc(25% -10px); /* Aspect ratio correction */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -149,8 +145,8 @@ color_example {
 }
 
 .card.flipped {
-    font-size: 16px;
-    background: #F2A03D;
+    font-size: 16px; /* This style might need adjustment or removal */
+    background: #F2A03D; /* Visible when flipped if no image*/
 }
 
 /*--------------------------------------------Buttons*/
@@ -189,22 +185,11 @@ button:hover {
     text-decoration: underline;
 }
 
-/*--------------------------------------------Media Queries*/
-@media (max-width: 320px) {
-    .grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .card {
-        padding: 10%;
-    }
-}
-
+/*--------------------------------------------Media Queries for Different Screen Sizes*/
+@media (max-width: 320px),
 @media (max-width: 414px) {
     .grid {
         grid-template-columns: repeat(2, 1fr);
-    }
-    .card {
-        padding: 10%;
     }
 }
 
@@ -212,17 +197,11 @@ button:hover {
     .grid {
         grid-template-columns: repeat(3, 1fr);
     }
-    .card {
-        padding: 10%;
-    }
 }
 
 @media (max-width: 1024px) {
     .grid {
         grid-template-columns: repeat(4, 1fr);
-    }
-    .card {
-        padding: 10%;
     }
 }
 
