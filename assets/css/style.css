@@ -190,41 +190,21 @@ button:hover {
 }
 
 /*--------------------------------------------Media Queries*/
-@media (max-width: 768px) {
-    .grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-    .card {
-        padding-bottom: 100%;
-    }
-}
-
-@media (max-width: 480px) {
+@media (max-width: 320px) {
     .grid {
         grid-template-columns: repeat(2, 1fr);
     }
     .card {
-        padding-bottom: 100%;
+        padding: 10%;
     }
 }
 
-@media (min-width: 992px) {
-    .content-wrap {
-        padding-top: 300px;
-}
-
-@media (min-width: 1024px) {
+@media (max-width: 414px) {
     .grid {
-        grid-template-columns: repeat(4, minmax(150px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
     }
     .card {
-        padding-bottom: 100%;
-    }
-}
-
-@media (min-width: 1440px) {
-    .grid {
-        grid-template-columns: repeat(5, minmax(150px, 1fr));
+        padding: 10%;
     }
 }
 
