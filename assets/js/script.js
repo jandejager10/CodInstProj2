@@ -12,16 +12,19 @@ document.addEventListener('DOMContentLoaded', () => {
         cardElement.classList.add('card');
         cardElement.dataset.name = cardName;
 
-        //ensure cards start face down
+        // Ensure cards start face down and set background image for flipped state
         cardElement.addEventListener('click', flipCard);
+        cardElement.style.backgroundImage = `url('assets/img/${cardName}.webp')`;
+        cardElement.style.backgroundSize = 'cover'; // Ensure the image covers the card
+        cardElement.style.backgroundPosition = 'center'; // Center the image
+        cardElement.style.visibility = 'hidden'; // Hide the image initially
         return cardElement;
     }
 
     function flipCard() {
         if (lockBoard || this.classList.contains('flipped')) return;
         
-        // Show the card's image only when it's flipped
-        this.style.backgroundImage = `url('assets/img/${this.dataset.name}.webp')`;
+        this.style.visibility = 'visible'; // Show the image when flipped
         this.classList.add('flipped');
 
         if (!hasFlippedCard) {
@@ -36,7 +39,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function checkForMatch() {
         let isMatch = firstCard.dataset.name === secondCard.dataset.name;
-        isMatch ? disableCards() : unflipCards();
+        if (isMatch) {
+            disableCards();
+        } else {
+            unflipCards();
+        }
     }
 
     function disableCards() {
@@ -52,10 +59,8 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
             firstCard.classList.remove('flipped');
             secondCard.classList.remove('flipped');
-
-            // Remove background image to hide the card face
-            firstCard.style.backgroundImage = '';
-            secondCard.style.backgroundImage = '';
+            firstCard.style.visibility = 'hidden';
+            secondCard.style.visibility = 'hidden';
 
             resetBoard();
         }, 1500);
@@ -72,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
         statusText.textContent = `Attempts: ${attempts} | Matches: ${matches}`;
     }
 
-    // Code to reset the game
+    // To reset the game
     function resetGame() {
         grid.innerHTML = '';
         attempts = 0;
@@ -88,15 +93,13 @@ document.addEventListener('DOMContentLoaded', () => {
             .map(cardName => createCard(cardName));
 
         deck.forEach(card => {
-            //Ensure card starts face down
             card.classList.remove('flipped');
-            card.style.backgroundImage = '';
+            card.style.visibility = 'hidden'; // Ensure cards start face down
             grid.appendChild(card);
         });
         updateStatusText();
     }
 
-    //Initialise game
     initGame();
     // Event listener for the reset button
     document.getElementById('resetButton').addEventListener('click', resetGame);
