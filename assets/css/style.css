@@ -8,18 +8,6 @@
     z-index:10;
  }
 
- @media (min-width: 768px) {
-     header {
-         background-image: url('/assets/img/background-medium.webp');
-     }
- }
- 
- @media (min-width: 1024px) {
-     header {
-         background-image: url('/assets/img/background-large.webp');
-     }
- }
-
  .navbar {
     padding: 1em 0;
     position: fixed;
@@ -106,6 +94,7 @@ color_example {
     } 
 
 /*--------------------------------------------Container*/
+/*
 .game-container {
     width: auto;
     max-width: 100%;
@@ -113,11 +102,11 @@ color_example {
     padding: 20px
     box-sizing: border-box;
 }
-
+*/
 /*--------------------------------------------Grid for Cards*/
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    grid-template-columns: repeat(4, 1fr); /* Keep 4x4 grid on all screens */
     gap: 10px;
     justify-content: center;
 }
@@ -126,14 +115,16 @@ color_example {
 .card {
     background: #F2295F; /* Fallback color */
     position: relative;
-    width: calc(25% -10px);
+    width: 100%;
     height: 0;
-    padding-top: calc(25% -10px); /* Aspect ratio correction */
+    padding-top: 100%; /* 1:1 Aspect ratio */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    transform-style: preserve-3d; /* Enable 3D transformations */
+    transition: transform 0.6s;
 }
-
+/*
 .card::before {
     content: '';
     display: block;
@@ -143,10 +134,9 @@ color_example {
     right: 0;
     bottom: 0;
 }
-
+*/
 .card.flipped {
-    font-size: 16px; /* This style might need adjustment or removal */
-    background: #F2A03D; /* Visible when flipped if no image*/
+    transform: rotateY(180deg); /* Flip the card on the Y-axis when class 'flipped' is added */
 }
 
 /*--------------------------------------------Buttons*/
@@ -186,6 +176,7 @@ button:hover {
 }
 
 /*--------------------------------------------Media Queries for Different Screen Sizes*/
+/*
 @media (max-width: 320px),
 @media (max-width: 414px) {
     .grid {
@@ -204,7 +195,7 @@ button:hover {
         grid-template-columns: repeat(4, 1fr);
     }
 }
-
+*/
 /*-----------------------------------Flexible Text Sizes*/
 .status-text, .game-footer p{
     font-size: calc(10px + 1vw);
