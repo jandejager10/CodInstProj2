@@ -1,3 +1,4 @@
+/* esversion: 6 */
 document.addEventListener('DOMContentLoaded', () => {
     const grid = document.getElementById('gameGrid');
     const statusText = document.getElementById('statusText');
@@ -11,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const cardElement = document.createElement('div');
         cardElement.classList.add('card');
         cardElement.dataset.name = cardName;
-
         // Ensure cards start face down and set background image for flipped state
         cardElement.addEventListener('click', flipCard);
         cardElement.style.backgroundImage = `url('assets/img/${cardName}.webp')`;
@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function flipCard() {
         if (lockBoard || this.classList.contains('flipped')) return;
-        
         this.style.visibility = 'visible'; // Show the image when flipped
         this.classList.add('flipped');
 
@@ -88,13 +87,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize game
     function initGame() {
         const cardNames = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
-        const deck = [...cardNames, ...cardNames]
-            .sort(() => Math.random() - 0.5)
-            .map(cardName => createCard(cardName));
-
+        const deck = [...cardNames, ...cardNames].sort(() => Math.random() - 0.5).map(createCard);
         deck.forEach(card => {
             card.classList.remove('flipped');
-            card.style.visibility = 'hidden'; // Ensure cards start face down
+            card.style.visibility = 'hidden';
             grid.appendChild(card);
         });
         updateStatusText();
