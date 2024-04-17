@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let lockBoard = false;
     let firstCard, secondCard;
 
-    function createCard(cardName) {
+    /*function createCard(cardName) {
         const cardElement = document.createElement('div');
         cardElement.classList.add('card');
         cardElement.dataset.name = cardName;
@@ -18,6 +18,14 @@ document.addEventListener('DOMContentLoaded', () => {
         cardElement.style.backgroundSize = 'cover'; // Ensure the image covers the card
         cardElement.style.backgroundPosition = 'center'; // Center the image
         //cardElement.style.visibility = 'hidden'; // Hide the image initially
+        return cardElement;
+    } */
+    function createCard(cardName) {
+        const cardElement = document.createElement('div');
+        cardElement.classList.add('card');
+        cardElement.dataset.name = cardName;
+        cardElement.addEventListener('click', flipCard);
+        cardElement.style.backgroundImage = `url('assets/img/${cardName}.webp')`; // Ensure this path is correct
         return cardElement;
     }
 
