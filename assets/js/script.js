@@ -17,21 +17,21 @@ document.addEventListener('DOMContentLoaded', () => {
         cardElement.style.backgroundImage = `url('assets/img/${cardName}.webp')`;
         cardElement.style.backgroundSize = 'cover'; // Ensure the image covers the card
         cardElement.style.backgroundPosition = 'center'; // Center the image
-        cardElement.style.visibility = 'hidden'; // Hide the image initially
+        // cardElement.style.visibility = 'hidden'; // Hide the image initially
         return cardElement;
     }
 
     function flipCard() {
         if (lockBoard || this.classList.contains('flipped')) return;
-        this.style.visibility = 'visible'; // Show the image when flipped
+    
         this.classList.add('flipped');
-
+    
         if (!hasFlippedCard) {
             hasFlippedCard = true;
             firstCard = this;
             return;
         }
-
+    
         secondCard = this;
         checkForMatch();
     }
@@ -58,9 +58,6 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
             firstCard.classList.remove('flipped');
             secondCard.classList.remove('flipped');
-            firstCard.style.visibility = 'hidden';
-            secondCard.style.visibility = 'hidden';
-
             resetBoard();
         }, 1500);
         attempts++;
@@ -90,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const deck = [...cardNames, ...cardNames].sort(() => Math.random() - 0.5).map(createCard);
         deck.forEach(card => {
             card.classList.remove('flipped');
-            card.style.visibility = 'hidden';
+            // card.style.visibility = 'hidden';
             grid.appendChild(card);
         });
         updateStatusText();
