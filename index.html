@@ -21,18 +21,18 @@
             <i class="fa-solid fa-otter"></i> Kawaii Memory Game
         </h1>
         <nav class="navbar nav-item">
-                    <a href="index.html">Home</a> | 
-                    <a href="contact.html">Contact</a>
+                    <a href="index.html" aria-label="Go to the Home page">Home</a> | 
+                    <a href="contact.html" aria-label="Go to the Contact page">Contact</a>
         </nav>
     </header>
 
     <div class="page-container">
         <div class="content-wrap">
             <div class="game-container">
-                <button onclick="showInstructions()">Show Instructions</button>
+                <button onclick="showInstructions()" aria-label="Show game instructions">Show Instructions</button>
                 <div class="grid" id="gameGrid"></div>
                 <span class="status-text" id="statusText">Attempts: 0 | Matches: 0</span>
-                <button id="resetButton">Reset Game</button>
+                <button id="resetButton" aria-label="Reset the game and start over">Reset Game</button>
             </div>
         </div>
         <!-- Footer content -->
