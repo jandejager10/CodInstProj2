@@ -10,50 +10,25 @@
     top: 0;
  }
 
- /*.navbar {
-    padding: 1em 0;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: transparent;
- }
-*/
-
-
- /*.container, .nav-list {
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 15px;
-}
-*/ /*
-.nav-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-}
-*/ /*
 .nav-item {
     margin-right: 20px;
 }
-*/ /*
+
 .nav-item a {
     color: white;
     text-decoration: none;
     padding: 5px 10px;
     transition: background-color 0.3s ease;
 }
-*/ /*
+
 .nav-item a:hover {
     background-color: #04D99D;
 }
-*/ /*
+
 .heading {
     margin-top: 20px;
 }
-*/ 
+
  /*---------------------------------------Style the body */
 
  body, html {
@@ -97,7 +72,7 @@ color_example {
     } 
 
 /*--------------------------------------------Container*/
-/*
+
 .game-container {
     width: auto;
     max-width: 100%;
@@ -105,7 +80,7 @@ color_example {
     padding: 20px
     box-sizing: border-box;
 }
-*/
+
 /*--------------------------------------------Grid for Cards*/
 .grid {
     display: grid;
@@ -180,27 +155,6 @@ button:hover {
     text-decoration: underline;
 }
 
-/*--------------------------------------------Media Queries for Different Screen Sizes*/
-/*
-@media (max-width: 320px),
-@media (max-width: 414px) {
-    .grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (max-width: 1024px) {
-    .grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-*/
 /*-----------------------------------Flexible Text Sizes*/
 .status-text, .game-footer p{
     font-size: calc(10px + 1vw);
