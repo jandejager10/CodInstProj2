@@ -139,24 +139,8 @@ button:hover {
     display: none;
 }
 
-/*--------------------------------------------Footer*/
-.game-footer {
-    text-align: center;
-    padding: 10px;
-    color: #F2A03D;
-}
-
-.game-footer a {
-    color: #04D99D;
-    text-decoration: none;
-}
-
-.game-footer a:hover {
-    text-decoration: underline;
-}
-
 /*-----------------------------------Flexible Text Sizes*/
-.status-text, .game-footer p{
+.status-text, p{
     font-size: calc(10px + 1vw);
     font-family: "Hachi Maru Pop", cursive;
     color: #FFFFFF;
