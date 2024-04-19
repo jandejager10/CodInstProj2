@@ -84,8 +84,8 @@ Navigate to the project directory and open `index.html` in your web browser to s
 - keep track of time
 
 # Acknowledgements + Code
--	Adobe, for the color wheel.  #2D3540	#0B8C38	#20733D #5DBF4E #F2F2F2
--	Pictures / Photos from https://stock.adobe.com/
+-	Adobe, for the color wheel.  #2D3540 #0B8C38 #20733D #5DBF4E #F2F2F2
+-   Pictures https://www.shutterstock.com/
 -   Favicon - https://icons8.com/
 -   Fonts - https://fonts.googleapis.com/
 -   Stylesheets and icons - https://kit.fontawesome.com
