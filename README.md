@@ -78,7 +78,7 @@ Navigate to the project directory and open `index.html` in your web browser to s
     Game Grid: A 4x4 grid where the game cards will be placed.
     Status Text: Below the grid, showing the number of attempts and matches.
     Reset Game Button: An option to restart the game at any time.
-    ![Layout Image](https://github.com/jandejager10/CodInstProj2/blob/main/assets/img/wireframe.png)
+    ![Layout Image](https://github.com/jandejager10/CodInstProj2/blob/main/assets/testing/wireframe.png)
 
 ### Reminders
 - keep track of time
@@ -102,15 +102,37 @@ Navigate to the project directory and open `index.html` in your web browser to s
 -   21/04/2024 - Final Submission Date.
 
 ### TESTING
--	User Test
--	
+-	Tiles are squashed.
+![Test1 Image](https://github.com/jandejager10/CodInstProj2/blob/main/assets/testing/screen1.png)
+-	Reset game button not working.
+![Test2 Image](https://github.com/jandejager10/CodInstProj2/blob/main/assets/testing/screen2.png)
+-   Footer not at bottom of page. Footer still wrong but card sizes now ok.
+![Test3 Image](https://github.com/jandejager10/CodInstProj2/blob/main/assets/testing/screen3.png)
+-   Several images not showing. Mismatched naming between file and code.
+![Test4 Image](https://github.com/jandejager10/CodInstProj2/blob/main/assets/testing/screen4.png)
+-   Tiles stay flipped even after game is reset or page refreshed.
+![Test5 Image](https://github.com/jandejager10/CodInstProj2/blob/main/assets/testing/screen5.png)
+-   After fixing image on flip only. Cards now display incorrectly sized image.
+![Test6 Image](https://github.com/jandejager10/CodInstProj2/blob/main/assets/testing/screen6.png)
+-   Problem when changing screen sizes. Works well for mobile but not for larger screens.
+![Test7 Image](https://github.com/jandejager10/CodInstProj2/blob/main/assets/testing/screen7.png)
+-   Made the cards invisible when ading new functionality.
+![Test8 Image](https://github.com/jandejager10/CodInstProj2/blob/main/assets/testing/screen8.png)
+-   Header stubornly sticks to the left.
+![Test9 Image](https://github.com/jandejager10/CodInstProj2/blob/main/assets/testing/screen9.png)
+-   HTML Validation using W3C.
+![TestHTML Image](https://github.com/jandejager10/CodInstProj2/blob/main/assets/testing/HTMLvalidation.png)
+-   CSS Validation using W3c.
+    color_example error is expected.
+    .game-container error was a missing semicolon in previous line. Now fixed.
+![TestCSS Image](https://github.com/jandejager10/CodInstProj2/blob/main/assets/testing/CSSvalidation.png)
+-   [JS HINT](https://jshint.com/) validation
+![TestJS Image](https://github.com/jandejager10/CodInstProj2/blob/main/assets/testing/JSvalidation.png)
 
--   Dev test
-
-
-- Initial Page load with Lighthouse - Performance - 
-
-
+- Lighthouse mobile test
+![TestLighthouseMobile Image](https://github.com/jandejager10/CodInstProj2/blob/main/assets/testing/LighthouseMobile.png)
+- Lighthouse desktop test
+![TestLighthouseDesktop Image](https://github.com/jandejager10/CodInstProj2/blob/main/assets/testing/LighthouseDesktop.png)
 
 ## License
 This project is licensed under the MIT License - see the () file for details.
