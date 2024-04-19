@@ -102,6 +102,9 @@ Navigate to the project directory and open `index.html` in your web browser to s
 -   21/04/2024 - Final Submission Date.
 
 ### TESTING
+Automated testing with Jest not used as manual testing and using validators picked up most errors.
+
+Manual testing scenarios shown here:
 -	Tiles are squashed.
 ![Test1 Image](https://github.com/jandejager10/CodInstProj2/blob/main/assets/testing/screen1.png)
 -	Reset game button not working.
@@ -127,11 +130,12 @@ Navigate to the project directory and open `index.html` in your web browser to s
     .game-container error was a missing semicolon in previous line. Now fixed.
 ![TestCSS Image](https://github.com/jandejager10/CodInstProj2/blob/main/assets/testing/CSSvalidation.png)
 -   [JS HINT](https://jshint.com/) validation
+The error regarding the unused variable has been manualy tested
 ![TestJS Image](https://github.com/jandejager10/CodInstProj2/blob/main/assets/testing/JSvalidation.png)
 
 - Lighthouse mobile test
 ![TestLighthouseMobile Image](https://github.com/jandejager10/CodInstProj2/blob/main/assets/testing/LighthouseMobile.png)
-- Lighthouse desktop test
+- Lighthouse desktop test.
 ![TestLighthouseDesktop Image](https://github.com/jandejager10/CodInstProj2/blob/main/assets/testing/LighthouseDesktop.png)
 
 ## License
