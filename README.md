@@ -79,6 +79,7 @@ Navigate to the project directory and open `index.html` in your web browser to s
     Status Text: Below the grid, showing the number of attempts and matches.
     Reset Game Button: An option to restart the game at any time.
     ![Layout Image](https://github.com/jandejager10/CodInstProj2/blob/main/assets/testing/wireframe.png)
+    Mockup with [amiresponsive](https://ui.dev/amiresponsive)
 
 ### Reminders
 - keep track of time
@@ -86,7 +87,7 @@ Navigate to the project directory and open `index.html` in your web browser to s
 ### Acknowledgements + Code
 -	Adobe, for the color wheel.  #2D3540 #0B8C38 #20733D #5DBF4E #F2F2F2
 -   Pictures https://www.shutterstock.com/
--   Favicon - https://icons8.com/
+-   Favicon - https://www.shutterstock.com/
 -   Fonts - https://fonts.googleapis.com/
 -   Stylesheets and icons - https://kit.fontawesome.com
 -   Code usage lookups - https://www.w3schools.com/

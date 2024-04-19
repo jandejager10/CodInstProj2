@@ -6,8 +6,9 @@
     background-color: #F2A03D;
     padding: 1em 0;
     width: 100%;
-    position: absolute;
+    position: fixed;
     top: 0;
+    z-index: 1000;
  }
 
 .nav-item {
@@ -46,6 +47,7 @@
     width: 100%;
     max-width: 90%;
     min-height: 100vh;
+    margin-top: 70px;
 }
 
 .content-wrap {
@@ -147,3 +149,13 @@ button:hover {
     font-weight: 400;
 }
 
+/*-----------------------------------Media*/
+@media (max-width: 600px) {
+    .navbar a {
+        font-size: 14px; /* Smaller font size for smaller screens */
+        padding: 5px; /* Smaller padding */
+    }
+    .heading {
+        font-size: 18px; /* Adjust heading size */
+    }
+}
